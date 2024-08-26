@@ -1,8 +1,8 @@
 package kvraft
 
 import (
-	"labrpc"
 	"log"
+	"src/labrpc"
 	"time"
 )
 import "crypto/rand"
@@ -45,7 +45,6 @@ func (ck *Clerk) log(v ...interface{}) {
 	}
 }
 
-//
 // fetch the current value for a key.
 // returns "" if the key does not exist.
 // keeps trying forever in the face of all other errors.
@@ -56,7 +55,6 @@ func (ck *Clerk) log(v ...interface{}) {
 // the types of args and reply (including whether they are pointers)
 // must match the declared types of the RPC handler function's
 // arguments. and reply must be passed as a pointer.
-//
 func (ck *Clerk) Get(key string) string {
 	ck.log("in get: ", key)
 	args := GetArgs{Key: key, MsgId: ck.genMsgId(), ClientId: ck.clientId}
@@ -95,7 +93,6 @@ func (ck *Clerk) Get(key string) string {
 
 }
 
-//
 // shared by Put and Append.
 //
 // you can send an RPC with code like this:
@@ -104,7 +101,6 @@ func (ck *Clerk) Get(key string) string {
 // the types of args and reply (including whether they are pointers)
 // must match the declared types of the RPC handler function's
 // arguments. and reply must be passed as a pointer.
-//
 func (ck *Clerk) PutAppend(key string, value string, op string) {
 	// You will have to modify this function.
 	args := PutAppendArgs{

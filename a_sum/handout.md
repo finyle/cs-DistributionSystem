@@ -54,3 +54,18 @@
 ### 1. garbage collection of state 
 ### 2. client requests during configuration changes 
 
+
+# ################################################################
+# src
+
+# 1. main/mrsequential: 
+## 注： go buildmode=plugin : windows 环境不支持 plugin 模式， 可以在wsl中编译so文件，再调用
+
+# 2. raft/test_test
+## 注：当前目录导包相对路径设置
+
+# 3. kvraft/test_test
+
+# 4. shardkv/test_test
+#    shardmaster/test_test
+
